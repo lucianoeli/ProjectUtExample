@@ -2,16 +2,20 @@ package com.example.projectutexample;
 
 import android.content.SharedPreferences;
 import java.util.Calendar;
+
 /**
  *  Helper class to manage access to {@link SharedPreferences}.
  */
 public class SharedPreferencesHelper {
+
     // Keys for saving values in SharedPreferences.
     static final String KEY_NAME = "key_name";
     static final String KEY_DOB = "key_dob_millis";
     static final String KEY_EMAIL = "key_email";
+
     // The injected SharedPreferences implementation to use for persistence.
     private final SharedPreferences mSharedPreferences;
+
     /**
      * Constructor with dependency injection.
      *
@@ -20,6 +24,7 @@ public class SharedPreferencesHelper {
     public SharedPreferencesHelper(SharedPreferences sharedPreferences) {
         mSharedPreferences = sharedPreferences;
     }
+
     /**
      * Saves the given {@link SharedPreferenceEntry} that contains the user's settings to
      * {@link SharedPreferences}.
